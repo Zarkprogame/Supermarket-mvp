@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Supermarket_mvp.Views
 {
-    public partial class PayModeView : Form,IPayModeView
+    public partial class PayModeView : Form, IPayModeView
     {
         private bool isEdit;
         private bool isSuccessful;
@@ -22,31 +22,38 @@ namespace Supermarket_mvp.Views
             tabControl1.TabPages.Remove(tpPayModeDetail);
         }
 
-        public string PayModeId {
+        public string PayModeId
+        {
             get { return txtPayModeId.Text; }
             set { txtPayModeId.Text = value; }
         }
-        public string PayModeName {
+        public string PayModeName
+        {
             get { return txtPayModeName.Text; }
             set { txtPayModeName.Text = value; }
         }
-        public string PayModeObservation {
+        public string PayModeObservation
+        {
             get { return txtPayModeObservation.Text; }
             set { txtPayModeObservation.Text = value; }
         }
-        public string SearchValue {
+        public string SearchValue
+        {
             get { return txtSearch.Text; }
             set { txtSearch.Text = value; }
         }
-        public bool IsEdit {
+        public bool IsEdit
+        {
             get { return isEdit; }
             set { isEdit = value; }
         }
-        public bool IsSuccessful {
+        public bool IsSuccessful
+        {
             get { return isSuccessful; }
             set { isSuccessful = value; }
         }
-        public string Message {
+        public string Message
+        {
             get { return message; }
             set { message = value; }
         }
@@ -63,10 +70,29 @@ namespace Supermarket_mvp.Views
             dgPayMode.DataSource = payModeList;
         }
 
-        private void AssociateAndRaiseViewEvent() {
+        private static PayModeView instance;
+        public static PayModeView GetInstance() {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PayModeView();
+            }
+            else {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
+
+        private void AssociateAndRaiseViewEvent()
+        {
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            txtSearch.KeyDown += (s, e) =>{
-                if (e.KeyCode == Keys.Enter){
+            txtSearch.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
