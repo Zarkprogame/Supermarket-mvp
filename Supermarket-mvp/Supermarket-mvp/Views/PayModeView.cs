@@ -19,7 +19,10 @@ namespace Supermarket_mvp.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
+
             tabControl1.TabPages.Remove(tpPayModeDetail);
+
+            btnClose.Click += delegate { this.Close(); };
         }
 
         public string PayModeId
@@ -71,12 +74,18 @@ namespace Supermarket_mvp.Views
         }
 
         private static PayModeView instance;
-        public static PayModeView GetInstance() {
+        public static PayModeView GetInstance(Form parentContainer)
+        {
             if (instance == null || instance.IsDisposed)
             {
                 instance = new PayModeView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
-            else {
+            else
+            {
                 if (instance.WindowState == FormWindowState.Minimized)
                 {
                     instance.WindowState = FormWindowState.Normal;

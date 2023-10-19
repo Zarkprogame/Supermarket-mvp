@@ -119,6 +119,7 @@
             // 
             // btnClose
             // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnClose.Image = Properties.Resources.cerrar;
             btnClose.Location = new Point(550, 286);
             btnClose.Name = "btnClose";
@@ -128,6 +129,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnDelete.Image = Properties.Resources.delete;
             btnDelete.Location = new Point(550, 222);
             btnDelete.Name = "btnDelete";
@@ -137,6 +139,7 @@
             // 
             // btnEdit
             // 
+            btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEdit.Image = Properties.Resources.edit;
             btnEdit.Location = new Point(550, 158);
             btnEdit.Name = "btnEdit";
@@ -146,6 +149,7 @@
             // 
             // btnNew
             // 
+            btnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnNew.Image = Properties.Resources._new;
             btnNew.Location = new Point(550, 94);
             btnNew.Name = "btnNew";
@@ -157,6 +161,7 @@
             // 
             dgPayMode.AllowUserToAddRows = false;
             dgPayMode.AllowUserToDeleteRows = false;
+            dgPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgPayMode.Location = new Point(18, 94);
@@ -169,6 +174,7 @@
             // 
             // btnSearch
             // 
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSearch.Image = Properties.Resources.search_small;
             btnSearch.Location = new Point(492, 30);
             btnSearch.Name = "btnSearch";
@@ -178,6 +184,7 @@
             // 
             // txtSearch
             // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearch.Location = new Point(18, 48);
             txtSearch.Name = "txtSearch";

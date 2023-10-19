@@ -31,12 +31,14 @@
             panel1 = new Panel();
             btnPayMode = new Button();
             pictureBox1 = new PictureBox();
+            btnExit = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnExit);
             panel1.Controls.Add(btnPayMode);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
@@ -65,12 +67,24 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // btnExit
+            // 
+            btnExit.BackgroundImage = Properties.Resources.Leave;
+            btnExit.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExit.Dock = DockStyle.Bottom;
+            btnExit.Location = new Point(0, 327);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(250, 123);
+            btnExit.TabIndex = 2;
+            btnExit.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
+            IsMdiContainer = true;
             Name = "MainView";
             Text = "Supermarket";
             WindowState = FormWindowState.Maximized;
@@ -84,5 +98,6 @@
         private Panel panel1;
         private Button btnPayMode;
         private PictureBox pictureBox1;
+        private Button btnExit;
     }
 }
