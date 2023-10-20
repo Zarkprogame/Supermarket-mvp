@@ -282,8 +282,11 @@
             txtPayModeId.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             txtPayModeId.Location = new Point(42, 47);
             txtPayModeId.Name = "txtPayModeId";
+            txtPayModeId.ReadOnly = true;
             txtPayModeId.Size = new Size(259, 31);
             txtPayModeId.TabIndex = 1;
+            txtPayModeId.Text = "0";
+            txtPayModeId.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 

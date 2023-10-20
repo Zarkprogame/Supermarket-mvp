@@ -97,6 +97,7 @@ namespace Supermarket_mvp.Views
 
         private void AssociateAndRaiseViewEvent()
         {
+            //Evento Boton Buscar o Enter
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
@@ -104,6 +105,53 @@ namespace Supermarket_mvp.Views
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
+            };
+            //Evento Boton Nuevo
+            btnNew.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpPayModeList);
+                tabControl1.TabPages.Add(tpPayModeDetail);
+                tpPayModeDetail.Text = "Add New Pay Mode";
+            };
+            //Evento Boton Editar
+            btnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpPayModeList);
+                tabControl1.TabPages.Add(tpPayModeDetail);
+                tpPayModeDetail.Text = "Edit Pay Mode";
+            };
+            //Evento Boton Eliminar
+            btnDelete.Click += delegate
+            {
+                var result = MessageBox.Show(
+                        "Are you Sure you Want to Delete the Selected Pay Mode?",
+                        "Warning",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+            //Evento Boton Guardar
+            btnSave.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    tabControl1.TabPages.Remove(tpPayModeDetail);
+                    tabControl1.TabPages.Add(tpPayModeList);
+                }
+                MessageBox.Show(Message);
+            };
+            //Evento Boton Cancelar
+            btnCancel.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpPayModeDetail);
+                tabControl1.TabPages.Add(tpPayModeList);
             };
         }
     }
