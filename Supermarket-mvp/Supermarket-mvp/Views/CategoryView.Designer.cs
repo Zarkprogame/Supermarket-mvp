@@ -306,7 +306,7 @@
             Controls.Add(tabControl1);
             Controls.Add(panel1);
             Name = "CategoryView";
-            Text = "CategoryView";
+            Text = "Category Management";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
