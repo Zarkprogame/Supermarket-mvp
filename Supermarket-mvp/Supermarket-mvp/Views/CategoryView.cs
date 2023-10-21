@@ -41,8 +41,8 @@ namespace Supermarket_mvp.Views
         }
         public string SearchValue
         {
-            get { return txtSearch.Text; }
-            set { txtSearch.Text = value; }
+            get { return txtSearchCategory.Text; }
+            set { txtSearchCategory.Text = value; }
         }
         public bool IsEdit
         {
@@ -58,7 +58,7 @@ namespace Supermarket_mvp.Views
         {
             get { return message; }
             set { message = value; }
-        }   
+        }
 
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
@@ -96,8 +96,8 @@ namespace Supermarket_mvp.Views
         private void AssociateAndRaiseViewEvent()
         {
             //Evento Boton Buscar o Enter
-            btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            txtSearch.KeyDown += (s, e) =>
+            btnSearchCategory.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            txtSearchCategory.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -105,7 +105,7 @@ namespace Supermarket_mvp.Views
                 }
             };
             //Evento Boton Nuevo
-            btnNew.Click += delegate
+            btnNewCategory.Click += delegate
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tpCategoryList);
@@ -113,7 +113,7 @@ namespace Supermarket_mvp.Views
                 tpCategoryDetail.Text = "Add New Pay Mode";
             };
             //Evento Boton Editar
-            btnEdit.Click += delegate
+            btnEditCategory.Click += delegate
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tpCategoryList);
@@ -121,7 +121,7 @@ namespace Supermarket_mvp.Views
                 tpCategoryDetail.Text = "Edit Pay Mode";
             };
             //Evento Boton Eliminar
-            btnDelete.Click += delegate
+            btnDeleteCategory.Click += delegate
             {
                 var result = MessageBox.Show(
                         "Are you Sure you Want to Delete the Selected Pay Mode?",
@@ -137,7 +137,7 @@ namespace Supermarket_mvp.Views
             btnSave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
-                if (isSuccessful)
+                if (!isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tpCategoryDetail);
                     tabControl1.TabPages.Add(tpCategoryList);

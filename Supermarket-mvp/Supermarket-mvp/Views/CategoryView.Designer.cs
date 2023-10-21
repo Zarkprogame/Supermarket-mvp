@@ -34,12 +34,12 @@
             tabControl1 = new TabControl();
             tpCategoryList = new TabPage();
             btnClose = new Button();
-            btnDelete = new Button();
-            btnEdit = new Button();
-            btnNew = new Button();
+            btnDeleteCategory = new Button();
+            btnEditCategory = new Button();
+            btnNewCategory = new Button();
             dgCategory = new DataGridView();
-            btnSearch = new Button();
-            txtSearch = new TextBox();
+            btnSearchCategory = new Button();
+            txtSearchCategory = new TextBox();
             label2 = new Label();
             tpCategoryDetail = new TabPage();
             btnCancel = new Button();
@@ -102,12 +102,12 @@
             // tpCategoryList
             // 
             tpCategoryList.Controls.Add(btnClose);
-            tpCategoryList.Controls.Add(btnDelete);
-            tpCategoryList.Controls.Add(btnEdit);
-            tpCategoryList.Controls.Add(btnNew);
+            tpCategoryList.Controls.Add(btnDeleteCategory);
+            tpCategoryList.Controls.Add(btnEditCategory);
+            tpCategoryList.Controls.Add(btnNewCategory);
             tpCategoryList.Controls.Add(dgCategory);
-            tpCategoryList.Controls.Add(btnSearch);
-            tpCategoryList.Controls.Add(txtSearch);
+            tpCategoryList.Controls.Add(btnSearchCategory);
+            tpCategoryList.Controls.Add(txtSearchCategory);
             tpCategoryList.Controls.Add(label2);
             tpCategoryList.Location = new Point(4, 29);
             tpCategoryList.Name = "tpCategoryList";
@@ -127,35 +127,35 @@
             btnClose.TabIndex = 14;
             btnClose.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btnDeleteCategory
             // 
-            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnDelete.Image = Properties.Resources.delete;
-            btnDelete.Location = new Point(547, 229);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(150, 58);
-            btnDelete.TabIndex = 13;
-            btnDelete.UseVisualStyleBackColor = true;
+            btnDeleteCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnDeleteCategory.Image = Properties.Resources.delete;
+            btnDeleteCategory.Location = new Point(547, 229);
+            btnDeleteCategory.Name = "btnDeleteCategory";
+            btnDeleteCategory.Size = new Size(150, 58);
+            btnDeleteCategory.TabIndex = 13;
+            btnDeleteCategory.UseVisualStyleBackColor = true;
             // 
-            // btnEdit
+            // btnEditCategory
             // 
-            btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEdit.Image = Properties.Resources.edit;
-            btnEdit.Location = new Point(547, 165);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(150, 58);
-            btnEdit.TabIndex = 12;
-            btnEdit.UseVisualStyleBackColor = true;
+            btnEditCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnEditCategory.Image = Properties.Resources.edit;
+            btnEditCategory.Location = new Point(547, 165);
+            btnEditCategory.Name = "btnEditCategory";
+            btnEditCategory.Size = new Size(150, 58);
+            btnEditCategory.TabIndex = 12;
+            btnEditCategory.UseVisualStyleBackColor = true;
             // 
-            // btnNew
+            // btnNewCategory
             // 
-            btnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnNew.Image = Properties.Resources._new;
-            btnNew.Location = new Point(547, 101);
-            btnNew.Name = "btnNew";
-            btnNew.Size = new Size(150, 58);
-            btnNew.TabIndex = 11;
-            btnNew.UseVisualStyleBackColor = true;
+            btnNewCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnNewCategory.Image = Properties.Resources._new;
+            btnNewCategory.Location = new Point(547, 101);
+            btnNewCategory.Name = "btnNewCategory";
+            btnNewCategory.Size = new Size(150, 58);
+            btnNewCategory.TabIndex = 11;
+            btnNewCategory.UseVisualStyleBackColor = true;
             // 
             // dgCategory
             // 
@@ -172,25 +172,25 @@
             dgCategory.Size = new Size(526, 250);
             dgCategory.TabIndex = 10;
             // 
-            // btnSearch
+            // btnSearchCategory
             // 
-            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSearch.Image = Properties.Resources.search_small;
-            btnSearch.Location = new Point(489, 37);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(52, 49);
-            btnSearch.TabIndex = 9;
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearchCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearchCategory.Image = Properties.Resources.search_small;
+            btnSearchCategory.Location = new Point(489, 37);
+            btnSearchCategory.Name = "btnSearchCategory";
+            btnSearchCategory.Size = new Size(52, 49);
+            btnSearchCategory.TabIndex = 9;
+            btnSearchCategory.UseVisualStyleBackColor = true;
             // 
-            // txtSearch
+            // txtSearchCategory
             // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSearch.Location = new Point(15, 55);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Data to Search";
-            txtSearch.Size = new Size(468, 31);
-            txtSearch.TabIndex = 8;
+            txtSearchCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearchCategory.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearchCategory.Location = new Point(15, 55);
+            txtSearchCategory.Name = "txtSearchCategory";
+            txtSearchCategory.PlaceholderText = "Data to Search";
+            txtSearchCategory.Size = new Size(468, 31);
+            txtSearchCategory.TabIndex = 8;
             // 
             // label2
             // 
@@ -337,11 +337,11 @@
         private TextBox txtCategoryId;
         private Label label3;
         private Button btnClose;
-        private Button btnDelete;
-        private Button btnEdit;
-        private Button btnNew;
+        private Button btnDeleteCategory;
+        private Button btnEditCategory;
+        private Button btnNewCategory;
         private DataGridView dgCategory;
-        private Button btnSearch;
-        private TextBox txtSearch;
+        private Button btnSearchCategory;
+        private TextBox txtSearchCategory;
     }
 }

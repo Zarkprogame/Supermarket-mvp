@@ -139,7 +139,7 @@ namespace Supermarket_mvp.Views
             btnSave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
-                if (isSuccessful)
+                if (!isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tpPayModeDetail);
                     tabControl1.TabPages.Add(tpPayModeList);
