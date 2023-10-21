@@ -88,7 +88,7 @@ namespace Supermarket_mvp.Presenters
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "An Error Ocurred. Could not Delete Pay Mode";
+                view.Message = "An Error Ocurred. Could not Delete Product";
             }
         }
 

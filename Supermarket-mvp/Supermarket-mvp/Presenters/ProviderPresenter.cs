@@ -67,7 +67,7 @@ namespace Supermarket_mvp.Presenters
 
             view.ProviderNit = provider.Nit.ToString();
             view.ProviderName = provider.Name;
-            view.ProviderAddress = provider.Addres;
+            view.ProviderAddress = provider.Address;
             view.ProviderNumber = provider.Number;
 
             view.IsEdit = true;
@@ -87,7 +87,7 @@ namespace Supermarket_mvp.Presenters
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "An Error Ocurred. Could not Delete Pay Mode";
+                view.Message = "An Error Ocurred. Could not Delete Provider";
             }
         }
 
@@ -96,7 +96,7 @@ namespace Supermarket_mvp.Presenters
             var provider = new ProviderModel();
             provider.Nit = Convert.ToInt32(view.ProviderNit);
             provider.Name = view.ProviderName;
-            provider.Addres = view.ProviderAddress;
+            provider.Address = view.ProviderAddress;
             provider.Number = view.ProviderNumber;
 
             try

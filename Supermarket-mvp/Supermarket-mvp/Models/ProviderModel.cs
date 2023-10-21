@@ -18,12 +18,12 @@ namespace Supermarket_mvp.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Provider Name must be between 3 and 50 Characters")]
         public string Name { get; set; }
 
-        [DisplayName("Addres")]
+        [DisplayName("Provider Address")]
         [Required(ErrorMessage = "Provider Addres is Required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Provider Addres must be between 3 and 100 Characters")]
-        public string Addres { get; set; }
+        public string Address { get; set; }
 
-        [DisplayName("Number")]
+        [DisplayName("Provider Number")]
         [Required(ErrorMessage = "Provider Number is Required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Provider Number must be between 3 and 100 Characters")]
         public string Number { get; set; }

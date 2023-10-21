@@ -42,16 +42,16 @@
             txtSearchProvider = new TextBox();
             label2 = new Label();
             tpProviderDetail = new TabPage();
+            txtProviderNumber = new TextBox();
+            label6 = new Label();
+            txtProviderAddress = new TextBox();
             btnCancel = new Button();
             btnSave = new Button();
             label5 = new Label();
             txtProviderName = new TextBox();
             label4 = new Label();
-            txtProviderId = new TextBox();
+            txtProviderNit = new TextBox();
             label3 = new Label();
-            txtProviderAddress = new TextBox();
-            txtProviderNumber = new TextBox();
-            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -214,7 +214,7 @@
             tpProviderDetail.Controls.Add(label5);
             tpProviderDetail.Controls.Add(txtProviderName);
             tpProviderDetail.Controls.Add(label4);
-            tpProviderDetail.Controls.Add(txtProviderId);
+            tpProviderDetail.Controls.Add(txtProviderNit);
             tpProviderDetail.Controls.Add(label3);
             tpProviderDetail.Location = new Point(4, 29);
             tpProviderDetail.Name = "tpProviderDetail";
@@ -223,6 +223,34 @@
             tpProviderDetail.TabIndex = 1;
             tpProviderDetail.Text = "Provider Detail";
             tpProviderDetail.UseVisualStyleBackColor = true;
+            // 
+            // txtProviderNumber
+            // 
+            txtProviderNumber.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtProviderNumber.Location = new Point(41, 271);
+            txtProviderNumber.Name = "txtProviderNumber";
+            txtProviderNumber.PlaceholderText = "Provider Number";
+            txtProviderNumber.Size = new Size(259, 31);
+            txtProviderNumber.TabIndex = 10;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(41, 240);
+            label6.Name = "label6";
+            label6.Size = new Size(169, 28);
+            label6.TabIndex = 9;
+            label6.Text = "Provider Number";
+            // 
+            // txtProviderAddress
+            // 
+            txtProviderAddress.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtProviderAddress.Location = new Point(42, 195);
+            txtProviderAddress.Name = "txtProviderAddress";
+            txtProviderAddress.PlaceholderText = "Provider Address";
+            txtProviderAddress.Size = new Size(259, 31);
+            txtProviderAddress.TabIndex = 8;
             // 
             // btnCancel
             // 
@@ -271,16 +299,14 @@
             label4.TabIndex = 2;
             label4.Text = "Provider Name";
             // 
-            // txtProviderId
+            // txtProviderNit
             // 
-            txtProviderId.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtProviderId.Location = new Point(42, 47);
-            txtProviderId.Name = "txtProviderId";
-            txtProviderId.ReadOnly = true;
-            txtProviderId.Size = new Size(259, 31);
-            txtProviderId.TabIndex = 1;
-            txtProviderId.Text = "0";
-            txtProviderId.TextAlign = HorizontalAlignment.Right;
+            txtProviderNit.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtProviderNit.Location = new Point(42, 47);
+            txtProviderNit.Name = "txtProviderNit";
+            txtProviderNit.PlaceholderText = "Provider Nit";
+            txtProviderNit.Size = new Size(259, 31);
+            txtProviderNit.TabIndex = 1;
             // 
             // label3
             // 
@@ -288,37 +314,9 @@
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(41, 16);
             label3.Name = "label3";
-            label3.Size = new Size(112, 28);
+            label3.Size = new Size(121, 28);
             label3.TabIndex = 0;
-            label3.Text = "Provider Id";
-            // 
-            // txtProviderAddress
-            // 
-            txtProviderAddress.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtProviderAddress.Location = new Point(42, 195);
-            txtProviderAddress.Name = "txtProviderAddress";
-            txtProviderAddress.PlaceholderText = "Provider Address";
-            txtProviderAddress.Size = new Size(259, 31);
-            txtProviderAddress.TabIndex = 8;
-            // 
-            // txtProviderNumber
-            // 
-            txtProviderNumber.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtProviderNumber.Location = new Point(41, 271);
-            txtProviderNumber.Name = "txtProviderNumber";
-            txtProviderNumber.PlaceholderText = "Provider Number";
-            txtProviderNumber.Size = new Size(259, 31);
-            txtProviderNumber.TabIndex = 10;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(41, 240);
-            label6.Name = "label6";
-            label6.Size = new Size(169, 28);
-            label6.TabIndex = 9;
-            label6.Text = "Provider Number";
+            label3.Text = "Provider Nit";
             // 
             // ProviderView
             // 
@@ -354,7 +352,7 @@
         private Label label5;
         private TextBox txtProviderName;
         private Label label4;
-        private TextBox txtProviderId;
+        private TextBox txtProviderNit;
         private Label label3;
         private Button btnClose;
         private Button btnDelete;

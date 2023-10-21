@@ -25,20 +25,23 @@ namespace Supermarket_mvp.Views
             btnClose.Click += delegate { this.Close(); };
         }
 
-        public string ProviderNit {
-            get { return txtProviderId.Text; }
-            set { txtProviderId.Text = value; }
+        public string ProviderNit
+        {
+            get { return txtProviderNit.Text; }
+            set { txtProviderNit.Text = value; }
         }
         string IProviderView.ProviderName
         {
             get { return txtProviderName.Text; }
             set { txtProviderName.Text = value; }
         }
-        public string ProviderAddress {
+        public string ProviderAddress
+        {
             get { return txtProviderAddress.Text; }
             set { txtProviderAddress.Text = value; }
         }
-        public string ProviderNumber {
+        public string ProviderNumber
+        {
             get { return txtProviderNumber.Text; }
             set { txtProviderNumber.Text = value; }
         }
@@ -70,9 +73,9 @@ namespace Supermarket_mvp.Views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        public void SetProviderListBinldingSource(BindingSource productList)
+        public void SetProviderListBinldingSource(BindingSource providerList)
         {
-            dgProvider.DataSource = productList;
+            dgProvider.DataSource = providerList;
         }
 
         private static ProviderView instance;
@@ -112,6 +115,7 @@ namespace Supermarket_mvp.Views
             btnNew.Click += delegate
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
+                txtProviderNit.Enabled = true;
                 tabControl1.TabPages.Remove(tpProviderList);
                 tabControl1.TabPages.Add(tpProviderDetail);
                 tpProviderDetail.Text = "Add New Provider";
@@ -120,6 +124,7 @@ namespace Supermarket_mvp.Views
             btnEdit.Click += delegate
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
+                txtProviderNit.Enabled = false;
                 tabControl1.TabPages.Remove(tpProviderList);
                 tabControl1.TabPages.Add(tpProviderDetail);
                 tpProviderDetail.Text = "Edit Provider";
