@@ -10,12 +10,12 @@ namespace Supermarket_mvp.Presenters
 {
     internal class PayModePresenter
     {
-        private IPayModeView view;
+        private ICategoryView view;
         private IPayModeRepository repository;
         private BindingSource payModeBindingSource;
         private IEnumerable<PayModeModel> payModeList;
 
-        public PayModePresenter(IPayModeView view, IPayModeRepository repository)
+        public PayModePresenter(ICategoryView view, IPayModeRepository repository)
         {
             this.payModeBindingSource = new BindingSource();
 

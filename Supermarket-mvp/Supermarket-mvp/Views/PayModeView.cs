@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Supermarket_mvp.Views
 {
-    public partial class PayModeView : Form, IPayModeView
+    public partial class PayModeView : Form, ICategoryView
     {
         private bool isEdit;
         private bool isSuccessful;
