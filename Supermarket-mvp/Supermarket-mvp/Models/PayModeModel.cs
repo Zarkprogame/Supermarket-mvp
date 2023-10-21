@@ -18,7 +18,7 @@ namespace Supermarket_mvp.Models
         [StringLength(50,MinimumLength = 3, ErrorMessage = "Pay Mode Name must be between 3 and 50 Characters")]
         public string Name { get; set; }
 
-        [DisplayName("Description")]
+        [DisplayName("Obseration")]
         [Required(ErrorMessage = "Pay Mode Description is Required")]
         [StringLength(200, MinimumLength = 3, ErrorMessage = "Pay Mode Observation must be between 3 and 200 Characters")]
         public string Observation { get; set; }
