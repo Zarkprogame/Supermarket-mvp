@@ -11,7 +11,7 @@ namespace Supermarket_mvp.Views
         string ProductId { get; set; }
         string ProductName { get; set; }
         string ProductPrice { get; set; }
-        string ProducStock { get; set; }
+        string ProductStock { get; set; }
         string CategoryId { get; set; }
 
         string SearchValue { get; set; }
