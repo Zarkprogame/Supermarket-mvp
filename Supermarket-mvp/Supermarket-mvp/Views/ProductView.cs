@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using Supermarket_mvp._repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +32,8 @@ namespace Supermarket_mvp.Views
             get { return txtProductId.Text; }
             set { txtProductId.Text = value; }
         }
-        string IProductView.ProductName {
+        string IProductView.ProductName
+        {
             get { return txtProductName.Text; }
             set { txtProductName.Text = value; }
         }
@@ -39,13 +42,13 @@ namespace Supermarket_mvp.Views
             get { return txtProductPrice.Text; }
             set { txtProductPrice.Text = value; }
         }
-        public string ProducStock
+        public string ProductStock
         {
             get { return txtProductStock.Text; }
             set { txtProductStock.Text = value; }
         }
         public string CategoryId
-        {////////////////////////////////////////////
+        {
             get { return comboBoxCategoryId.Text; }
             set { comboBoxCategoryId.Text = value; }
         }

@@ -99,7 +99,14 @@ namespace Supermarket_mvp.Presenters
             product.Name = view.ProductName;
             product.Price = Convert.ToInt32(view.ProductPrice);
             product.Stock = Convert.ToInt32(view.ProductStock);
-            product.CategoryId = Convert.ToInt32(view.CategoryId);
+            string categorystr = ProductView.comboBoxCategoryId.Text;
+            string category = "";
+            foreach (char item in categorystr){
+                if (char.IsNumber(item)){
+                    category += item;
+                }
+            }
+            product.CategoryId = int.Parse(category);
 
             try
             {

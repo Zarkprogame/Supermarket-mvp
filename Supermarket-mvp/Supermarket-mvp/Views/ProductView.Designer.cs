@@ -386,7 +386,7 @@
         private Button btnSearch;
         private TextBox txtSearchProduct;
         private Label label2;
-        private ComboBox comboBoxCategoryId;
+        public static ComboBox comboBoxCategoryId;
         private Label label6;
         private TextBox txtProductPrice;
         private Label label5;
