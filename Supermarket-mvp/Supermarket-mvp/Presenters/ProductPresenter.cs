@@ -136,9 +136,9 @@ namespace Supermarket_mvp.Presenters
         {
             view.ProductId = "0";
             view.ProductName = "";
-            view.ProductPrice = "0";
-            view.ProductStock = "0";
-            view.CategoryId = "0";
+            view.ProductPrice = "";
+            view.ProductStock = "";
+            view.CategoryId = "";
         }
 
         private void CancelAction(object? sender, EventArgs e)

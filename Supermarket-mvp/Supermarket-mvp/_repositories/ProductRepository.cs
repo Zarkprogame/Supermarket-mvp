@@ -53,9 +53,9 @@ namespace Supermarket_mvp._repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"UPDATE Products
+                command.CommandText = @"UPDATE Product
                                         SET Product_Name = @name,
-                                        Product_Price = @price
+                                        Product_Price = @price,
                                         Product_Stock = @stock
                                         WHERE Product_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
