@@ -21,6 +21,6 @@ namespace Supermarket_mvp.Models
         [DisplayName("Description")]
         [Required(ErrorMessage = "Category Description is Required")]
         [StringLength(200, MinimumLength = 3, ErrorMessage = "Category Description must be between 3 and 200 Characters")]
-        public string Description { get; set; }
+        public string Observation { get; set; }
     }
 }
